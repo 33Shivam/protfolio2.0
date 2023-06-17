@@ -1,12 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
+import Java from './Java.jsx';
+import Gcloud from './Gcloud.jsx';
+import Blockchain from './Blockchain.jsx';
+import Github from './Github.jsx';
+import { useState } from "react";
+import Development from './Development.jsx';
+import WebDesign from './WebDesign.jsx';
+
 
 const data = [
 "React",
-"JavaScript",
+"Web Design",
 "Blockchain",
-"Web Design",   
-"Cloud",
+"Google Cloud",
+"GitHub",
 ];
 
 
@@ -78,14 +86,34 @@ flex:1;
 `
 
 const Works = () => {
+    const [work, setWork] = useState("React3d");
     return (
         <Section>
             <Container>
                 <Left>
-                    <List>{data.map((item) => (<ListItem key={item} text={item}>{item}</ListItem>))}
-                    </List>
+                <List>
+            {data.map((item) => (
+              <ListItem key={item} text={item} onClick={() => setWork(item)}>
+                {item}
+              </ListItem>
+            ))}
+          </List>
                 </Left>
-                <Right></Right>
+                <Right>
+                {work === "React" ? (
+            <Development />
+          ) : work === "Web Design" ? (
+            <WebDesign />
+          ) : work === "Blockchain" ? (
+            <Blockchain />
+          ) : work === "Google Cloud" ? (
+            <Gcloud />
+          )  : work === "GitHub" ? (
+            <Github />
+          ) : (
+            <Development />
+          )}
+                </Right>
             </Container>
         </Section>
     );
