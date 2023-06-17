@@ -9,13 +9,16 @@ To set up the portfolio website locally, follow these steps:
 
 1. Clone the repository: git clone https://github.com/33Shivam/protfolio2.0
 2. Navigate to the project directory: cd protfolio2.0
-3. Install dependencies: yarn add
+3. Install dependencies:
+   ```
+   yarn install
+   ```
 
 ## Usage
 To start the development server and run the portfolio website, execute the following command:
 
 ```
-yarn install
+yarn run dev
 ```
 This command will launch the development server, and the portfolio website will be accessible at http://localhost:5173. You can customize and update the content by modifying the relevant components and assets.
 
