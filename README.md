@@ -16,9 +16,9 @@ git clone https://github.com/33Shivam/protfolio2.0
 cd protfolio2.0
 ```
 5. Install dependencies:
-   ```
-   yarn install
-   ```
+```
+yarn install
+```
 
 ## Usage
 To start the development server and run the portfolio website, execute the following command:
