@@ -30,5 +30,10 @@ The Portfolio Website offers the following features:
 6. Vite's fast build and hot module replacement for efficient development workflow
 
 ## Screenshots
+![Ss1](https://github.com/33Shivam/protfolio2.0/blob/4459e180ece70d666e61ba97f38eda6dcc765743/public/images/prot1.png)
+![Ss2](image link)
+![Ss3](image link)
+![Ss4](image link)
+![Ss5](image link)
 
 
