@@ -7,7 +7,13 @@ The Portfolio Website built with React, Three.js, and Vite App. It aims to showc
 ## Installation
 To set up the portfolio website locally, follow these steps:
 
-1. Clone the repository: git clone 
-2. Navigate to the project directory: cd your-repo
-3. Install dependencies: npm install
+1. Clone the repository: git clone https://github.com/33Shivam/protfolio2.0
+2. Navigate to the project directory: cd protfolio2.0
+3. Install dependencies: yarn add
 
+## Usage
+To start the development server and run the portfolio website, execute the following command:
+
+```
+yarn run dev
+```
