@@ -5,16 +5,15 @@ import Google from "./Google";
 
 const Gcloud = () => {
   return (
-  <>
-    <Canvas>
-      <Suspense fallback={null}>
-        <Stage environment="city" intensity={0.6}>
-          <Google />
-        </Stage>
-        <OrbitControls enableZoom={false} autoRotate />
-      </Suspense>
-    </Canvas>
-    </>
+     <Canvas>
+    <PerspectiveCamera position={[0, 0, 5]} />
+    <Suspense fallback={null}>
+        <Google/>
+        
+    </Suspense>
+    <OrbitControls enableZoom={false} autoRotate={false} />
+    <directionalLight intensity={1} position={[1, 1, 1]} />
+  </Canvas>
 
   );
 };

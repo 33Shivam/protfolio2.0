@@ -6,11 +6,12 @@ import Blockchain from './Blockchain.jsx';
 import Github from './Github.jsx';
 import { useState } from "react";
 import Development from './Development.jsx';
+import WebDesign from './WebDesign.jsx';
 
 
 const data = [
 "React",
-"Java",
+"Web Design",
 "Blockchain",
 "Google Cloud",
 "GitHub",
@@ -101,14 +102,16 @@ const Works = () => {
                 <Right>
                 {work === "React" ? (
             <Development />
-          ) : work === "Java" ? (
-            <Java />
+          ) : work === "Web Design" ? (
+            <WebDesign />
           ) : work === "Blockchain" ? (
             <Blockchain />
           ) : work === "Google Cloud" ? (
             <Gcloud />
-          ) : (
+          )  : work === "GitHub" ? (
             <Github />
+          ) : (
+            <Development />
           )}
                 </Right>
             </Container>

@@ -14,7 +14,7 @@ export default function Model(props) {
   const { nodes, materials } = useGLTF('/google-transformed.glb')
   return (
     <group {...props} dispose={null}>
-      <mesh geometry={nodes['Google_Logo_01_-_Default_0'].geometry} material={materials['01_-_Default']} position={[2.386, 0.182, -15.929]} />
+      <mesh geometry={nodes['Google_Logo_01_-_Default_0'].geometry} material={materials['01_-_Default']} position={[0, 0, 0]} scale={0.017} />
     </group>
   )
 }
