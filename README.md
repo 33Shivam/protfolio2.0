@@ -15,7 +15,7 @@ To set up the portfolio website locally, follow these steps:
 To start the development server and run the portfolio website, execute the following command:
 
 ```
-yarn run dev
+yarn install
 ```
 This command will launch the development server, and the portfolio website will be accessible at http://localhost:5173. You can customize and update the content by modifying the relevant components and assets.
 
