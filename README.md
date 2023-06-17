@@ -17,3 +17,18 @@ To start the development server and run the portfolio website, execute the follo
 ```
 yarn run dev
 ```
+This command will launch the development server, and the portfolio website will be accessible at http://localhost:5173. You can customize and update the content by modifying the relevant components and assets.
+
+## Features
+The Portfolio Website offers the following features:
+
+1. Interactive 3D graphics and animations powered by Three.js
+2. Responsive design for optimal viewing on various devices
+3. Sections to showcase projects, skills, experiences, and contact information
+4. Customizable content and styling through React components and CSS
+5. Smooth transitions and effects to enhance the user experience
+6. Vite's fast build and hot module replacement for efficient development workflow
+
+## Screenshots
+
+
