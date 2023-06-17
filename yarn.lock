@@ -1482,6 +1482,17 @@
     suspend-react "^0.1.3"
     zustand "^3.7.1"
 
+"@react-three/postprocessing@^2.14.10":
+  version "2.14.10"
+  resolved "https://registry.yarnpkg.com/@react-three/postprocessing/-/postprocessing-2.14.10.tgz#b06771808505b1a7e9382a2d42efeacad96851b0"
+  integrity sha512-abxjotccgqJmClkpwG+18Ca8l5fc1NniJvX1te60z+P6B/g7HB9JNtlBJfDl/MABZemmZQKT9moI35Dg6s3BQA==
+  dependencies:
+    maath "^0.5.3"
+    n8ao "^1.6.2"
+    postprocessing "^6.31.0"
+    screen-space-reflections "^2.5.0"
+    three-stdlib "^2.23.4"
+
 "@types/draco3d@^1.4.0":
   version "1.4.2"
   resolved "https://registry.yarnpkg.com/@types/draco3d/-/draco3d-1.4.2.tgz#7faccb809db2a5e19b9efb97c5f2eb9d64d527ea"
@@ -2767,6 +2778,11 @@ lru-cache@^5.1.1:
   dependencies:
     yallist "^3.0.2"
 
+maath@^0.5.3:
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/maath/-/maath-0.5.3.tgz#777a1f9b8463c6ffb199ea43406874a357c0cd58"
+  integrity sha512-ut63A4zTd9abtpi+sOHW1fPWPtAFrjK0E17eAthx1k93W/T2cWLKV5oaswyotJVDvvW1EXSdokAqhK5KOu0Qdw==
+
 maath@^0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/maath/-/maath-0.6.0.tgz#7841d0fb95bbb37d19b08b7c5458ef70190950d2"
@@ -2801,6 +2817,11 @@ ms@2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
+
+n8ao@^1.6.2:
+  version "1.6.5"
+  resolved "https://registry.yarnpkg.com/n8ao/-/n8ao-1.6.5.tgz#bfa75ad8e7ac1f19c2eb07c0c59314409944b9d4"
+  integrity sha512-CDDxPFVuiot6amVNxIYrwXPLENT4SGfXBLkjOfsnz2h6HL6bO8wOQnkDndUc2HQeLR9s5vLEF4kJBl3uBufE9Q==
 
 nanoid@^3.3.6:
   version "3.3.6"
@@ -2983,6 +3004,11 @@ postcss@^8.4.23:
     nanoid "^3.3.6"
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
+
+postprocessing@^6.31.0:
+  version "6.31.2"
+  resolved "https://registry.yarnpkg.com/postprocessing/-/postprocessing-6.31.2.tgz#3f93a1243b82663a31874b1e33ee519876c80620"
+  integrity sha512-wOpL3qFmleOWfk4uK377t+7BWF1MOzBTeT+yWr6l/NlgwZZb8xEW7I3j7auwhoW2jG1uuymBeCdUQK91yn8rsw==
 
 potpack@^1.0.1:
   version "1.0.2"
@@ -3228,6 +3254,11 @@ scheduler@^0.23.0:
   dependencies:
     loose-envify "^1.1.0"
 
+screen-space-reflections@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/screen-space-reflections/-/screen-space-reflections-2.5.0.tgz#2a6ea982da96f9c35f34a361b2555439f9fbb1f6"
+  integrity sha512-fWSDMhJS0xwD3LTxRRch7Lb9NzxsR66sCmtDmAA7i+OGnghUrBBsrha85ng7StnCBaLq/BKmZ97dLxWd1XgWdQ==
+
 semver@^5.6.0:
   version "5.7.1"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.7.1.tgz#a954f931aeba508d307bbf069eff0c01c96116f7"
@@ -3398,7 +3429,7 @@ three-mesh-bvh@^0.6.0:
   resolved "https://registry.yarnpkg.com/three-mesh-bvh/-/three-mesh-bvh-0.6.0.tgz#15523c335383df658dc60063a783fdd52d045dc5"
   integrity sha512-4/oXeqVMLuN9/P0M3L5ezIVrFiXQXKvjVTErkiSYMjSaPoWfNPAwqulSgLf4bIUPn8/Lq3rmIJwxbCuD8qDobA==
 
-three-stdlib@^2.23.9:
+three-stdlib@^2.23.4, three-stdlib@^2.23.9:
   version "2.23.10"
   resolved "https://registry.yarnpkg.com/three-stdlib/-/three-stdlib-2.23.10.tgz#94907a558a00da327bd74308c92078fea72f77fc"
   integrity sha512-y0DlxaN5HZXI9hKjEtqO2xlCEt7XyDCOMvD2M3JJFBmYjwbU+PbJ1n3Z+7Hr/6BeVGE6KZYcqPMnfKrTK5WTJg==
