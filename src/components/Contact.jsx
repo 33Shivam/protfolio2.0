@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import Map from './Map';
-
+import { motion } from 'framer-motion';
 
 const Section = styled.div`
 height: 100vh;
 scroll-snap-align: center;
 `
 
-const Container = styled.div`
+const Container = styled(motion.div)`
 width: 100%;
 height: 100%;
 display: flex;
@@ -24,12 +24,12 @@ align-items: flex-end;
 flex-direction: column;
 `
 
-const Title = styled.h1`
+const Title = styled(motion.h1)`
 font-weight: lighter;
 font-family: "Century Gothic";
 `
 
-const Form = styled.form`
+const Form = styled(motion.form)`
 width:500px;
 display: flex;
 flex-direction: column;
@@ -37,7 +37,7 @@ gap: 20px;
 `
 
 
-const Input = styled.input`
+const Input = styled(motion.input)`
 padding: 20px;
 background-color: #dfdbdb;
 border: none;
@@ -45,7 +45,7 @@ border-radius: 5px;
 font-family: "Century Gothic";
 `
 
-const TextArea = styled.textarea`
+const TextArea = styled(motion.textarea)`
 padding: 20px;
 background-color: #dfdbdb;
 border: none;
@@ -53,7 +53,7 @@ border-radius: 5px;
 font-family: "Century Gothic";
 `
 
-const Button = styled.button`
+const Button = styled(motion.button)`
 background-color: #17e1a4;
   border-radius: 8px;
   border-style: none;
@@ -100,12 +100,18 @@ flex: 1;
 const Contact = () => {
     return (
         <Section>
-            <Container>
+            <Container >
                 <Left>                    
                     <Map/>
                 </Left>
                 <Right>
-                <Form>
+                <Form initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 0.8,
+        delay: 0.5,
+        ease: [0, 0.71, 0.2, 1.01]
+      }}>
                     <Title>Contact Us</Title>
                         <Input placeholder='Name'></Input>
                         <Input placeholder='Email'></Input>

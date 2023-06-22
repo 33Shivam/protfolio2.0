@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
 import Typewriter from "typewriter-effect";
-
+import { delay, motion } from "framer-motion";
 
 const Section = styled.div`
 height: 100vh;
@@ -56,14 +56,14 @@ flex-direction: row;
 gap: 10px;
 margin: 0;
 `;
-const Desc = styled.h6`
+const Desc = styled(motion.p)`
 font-size: 16px;    
 font-family:"Century Gothic";
 font-weight: 100;
 line-height : 1.75;
 `;
 
-const Button = styled.button`
+const Button = styled(motion.button)`
 width: 150px;
 background-color: #17e1a4;
   border-radius: 8px;
@@ -97,7 +97,7 @@ background-color: #17e1a4;
   }`;
 
 
-const Img = styled.img`
+const Img = styled(motion.img)`
 width: 475px;
 height: 475px;  
 position: absolute;
@@ -137,7 +137,7 @@ const Hero = () => {
             <Navbar />
             <Container>
             <Left>
-                <Hello>Hi</Hello>
+                <Hello>Hello</Hello>
                 <Title>
                     <T1>I am a</T1>
                     <T2> <Typewriter 
@@ -155,11 +155,22 @@ const Hero = () => {
  }}
 /></T2>
                 </Title>
-                <Desc>
+                <Desc initial={{ opacity: 0, scale: 0 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 0.8,
+        delay: 0.5,
+        ease: [0, 0.71, 0.2, 1.01]
+      }}  > 
 Welcome to my website! I'm Shivam Anand,
  a student currently pursuing my studies at Delhi Technological University (DTU).
   I am thrilled to have you here.</Desc>
-                <Button>Download CV</Button>
+                <Button initial={{ opacity: 0, scale: 0 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 0.8,
+        ease: [0, 0.71, 0.2, 1.01]
+      }} whileHover={{scale:1.1}} whileTap={{scale:0.95}}>Download CV</Button>
             </Left>
             <Right>
             <Canvas>
@@ -177,7 +188,13 @@ Welcome to my website! I'm Shivam Anand,
               </Sphere>
             </Suspense>
           </Canvas>  
-                <Img src='./images/pfp4.png'/>  
+                <Img initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 0.8,
+        delay: 0.5,
+        ease: [0, 0.71, 0.2, 1.01]
+      }} src='./images/pfp4.png'/>  
             </Right>
             </Container>
         </Section>
