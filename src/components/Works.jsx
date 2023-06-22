@@ -7,6 +7,7 @@ import Github from './Github.jsx';
 import { useState } from "react";
 import Development from './Development.jsx';
 import WebDesign from './WebDesign.jsx';
+import { motion } from 'framer-motion';
 
 
 const data = [
@@ -44,7 +45,7 @@ flex-direction: column;
 gap: 20px;
 `
 
-const ListItem = styled.li`
+const ListItem = styled(motion.li)`
 font-size: 74px;
 font-weight: bold;
 cursor: pointer;
@@ -81,7 +82,7 @@ overflow: hidden;
 
 `;
 
-const Right = styled.div`
+const Right = styled(motion.div)`
 flex:1;
 `
 
@@ -93,13 +94,19 @@ const Works = () => {
                 <Left>
                 <List>
             {data.map((item) => (
-              <ListItem key={item} text={item} onClick={() => setWork(item)}>
+              <ListItem  initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.8,
+                delay: 0.5,
+                ease: [0, 0.71, 0.2, 1.01]
+              }}  key={item} text={item} onClick={() => setWork(item)}>
                 {item}
               </ListItem>
             ))}
           </List>
                 </Left>
-                <Right>
+                <Right  initial={{scale:0}} whileInView={{scale:1}}  >
                 {work === "React" ? (
             <Development />
           ) : work === "Web Design" ? (

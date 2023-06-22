@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { easeIn, motion } from 'framer-motion';
 
 
 const Section = styled.div`
@@ -26,12 +27,23 @@ gap: 20px;`;
 
 const Icon = styled.img``;
 
-const ListItem = styled.li`
+const ListItem = styled(motion.li)`
 cursor: pointer;
-font-family:"Century Gothic";`;
+font-family:"Century Gothic";
+border-radius: 14px;
+padding:8px;
 
-const Button = styled.button`
-background-color: #17e1a4;
+
+&:hover {
+  background-color: #107758;
+  transition: ease-in 0.3s;
+}
+
+`;
+
+
+const Button = styled(motion.button)`
+background-color: #13b484;
   border-radius: 8px;
   border-style: none;
   box-sizing: border-box;
@@ -81,7 +93,7 @@ const Navbar = () => {
             <Container>
                 <Links>
                 <Logo src = './images/bgrem.png'/> 
-                <List>
+                <List >
                 <ListItem>Home</ListItem> 
                 <ListItem>Contact</ListItem> 
                 <ListItem>Works</ListItem> 
@@ -90,7 +102,8 @@ const Navbar = () => {
                 </Links>
                 <Icons>
                     <Icon src = ''/>
-                    <Button>Hire Now</Button>
+                    <Button  whileHover={{ scale: 1.1 }}
+                    whileTap={{scale:0.9}}>Hire Now</Button>
                 </Icons>
             </Container>
            </Section>

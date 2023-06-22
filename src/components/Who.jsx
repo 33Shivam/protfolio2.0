@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import Cube from "./Cube";
-
+import { motion } from "framer-motion"; 
 
 const Section = styled.div`
 height: 100vh;
@@ -30,7 +30,7 @@ padding-left: 64px;
 /* background-color: red;   */
 `;
 
-const Right = styled.div`
+const Right = styled(motion.div)`
 flex: 2;
 justify-content : center;
 position: relative;
@@ -62,7 +62,7 @@ line-height: 1.5;
 
 `;
 
-const Button = styled.button`
+const Button = styled(motion.button)`
 width: 150px;
 background-color: #17e1a4;
   border-radius: 8px;
@@ -147,8 +147,14 @@ const Who = () => {
             </Suspense>
           </Canvas>
             </Left>
-            <Right>  
-                <Hello>Projects</Hello>
+            <Right initial={{ opacity: 0, scale: 0 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 0.8,
+        delay: 0.5,
+        ease: [0, 0.71, 0.2, 1.01]
+      }}>  
+                <Hello >Projects</Hello>
                 <Title>
                     <T1>My way to</T1>
                     <T2>Perfection</T2>
@@ -158,7 +164,7 @@ const Who = () => {
                   using Ethereum smart contracts. Leveraging the power of Google Cloud Platform, I can deploy and
                    manage applications with ease, ensuring seamless scalability and optimal performance. With Git, I maintain efficient version control and collaboration, 
                   while my proficiency in SQL empowers me to design and optimize databases for efficient data management</Desc>
-                <Button>See Projects</Button>
+                <Button whileHover={{scale:1.05}}  whileTap={{scale:0.95}}>See Projects</Button>
             </Right>
             </Container>
         </Section>
