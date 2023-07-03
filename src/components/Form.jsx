@@ -1,32 +1,18 @@
 import React from 'react';
-import styled from 'styled-components';
-import Map from './Map';
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
+import styled from 'styled-components'; 
 
 const Section = styled.div`
-height: 100vh;
-scroll-snap-align: center;
-`
+position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);`;
 
-const Container = styled(motion.div)`
-width: 100%;
-height: 100%;
-display: absolute;
-/* justify-content: space-between;
-gap: 50px; */
-`
-
-// const Left = styled.div`
-// flex: 1;
-// display: flex;
-// justify-content: center;
-// align-items: flex-end;
-// flex-direction: column;
-// `
 
 const Title = styled(motion.h1)`
 font-weight: lighter;
 font-family: "Century Gothic";
+color: #ffffff;
 `
 
 const Form = styled(motion.form)`
@@ -88,41 +74,27 @@ background-color: #17e1a4;
 
 `
 
-const Right = styled.div`
-left: 50%;
-top:50%;
-`
 
 
-
-
-
-
-const Contact = () => {
+const form = ({handleClose , text}) => {
     return (
         <Section>
-            <Container >
-                {/* <Left>                    
-                    <Map/>
-                </Left> */}
-                <Right>
-                <Form initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
+    <Form initial={{ opacity: 0, scale: 0 }}
+      whileInView={{ opacity: 1, scale: 1 }}
       transition={{
         duration: 0.8,
         delay: 0.5,
         ease: [0, 0.71, 0.2, 1.01]
-      }}>
-                    <Title>Contact Us</Title>
-                        <Input placeholder='Name'></Input>
-                        <Input placeholder='Email'></Input>
-                        <TextArea placeholder='Write Your Message' rows={10}></TextArea>
-                        <Button>Send</Button>
-                    </Form>
-                </Right>
-            </Container>
-        </Section>
+      }} >
+                      <Title>Contact Me</Title>
+                          <Input placeholder='Name'></Input>
+                          <Input placeholder='Email'></Input>
+                          <TextArea placeholder='Write Your Message' rows={10}></TextArea>
+                          <Button>Send</Button>
+                      </Form>
+                      </Section>
+                  
     );
 };
 
-export default Contact;
+export default form;

@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { easeIn, motion } from 'framer-motion';
+import { useState } from 'react';
+import Form from './form';
+import Modal from '@mui/material/Modal';
+import { Typography } from '@mui/material';
 
 
 const Section = styled.div`
@@ -88,22 +92,38 @@ const Logo = styled.img`
 height: 100px;`;
 
 const Navbar = () => {
-    return (
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+    return (   
+
         <Section>
             <Container>
                 <Links>
                 <Logo src = './images/bgrem.png'/> 
                 <List >
                 <ListItem>Home</ListItem> 
-                <ListItem>Contact</ListItem> 
+                <ListItem onClick={handleOpen}> Contact</ListItem>
+                <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+        
+      >
+        <Form/>
+      </Modal>
                 <ListItem>Works</ListItem> 
-                <ListItem>Studio</ListItem> 
+                <ListItem>Socials</ListItem> 
                 </List>
                 </Links>
                 <Icons>
                     <Icon src = ''/>
                     <Button  whileHover={{ scale: 1.1 }}
-                    whileTap={{scale:0.9}}>Hire Now</Button>
+                    whileTap={{scale:0.9}} >Hire Now</Button>    
+
+                    
                 </Icons>
             </Container>
            </Section>

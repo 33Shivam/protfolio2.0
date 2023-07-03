@@ -7,6 +7,7 @@ import Hero from './components/Hero'
 import Who from './components/Who'
 import Contact from './components/Contact'
 import styled from 'styled-components';
+import Footer from './components/Footer'
 
 const Container = styled.div`
 height: 100vh;
@@ -26,7 +27,8 @@ function App() {
      <Hero />
     <Who />
     <Works />   
-    <Contact />
+    {/* <Contact />   */}
+    <Footer />
   </Container>
   )
 }
