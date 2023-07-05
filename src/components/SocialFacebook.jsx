@@ -10,7 +10,6 @@ import { FaReact } from 'react-icons/fa';
 import { useLoader } from "@react-three/fiber";
 import { TextureLoader } from "three";
 import icon from "./3Dassets/Facebook.png";
-import { CursorArrowIcon } from "@radix-ui/react-icons";
 
 
 
