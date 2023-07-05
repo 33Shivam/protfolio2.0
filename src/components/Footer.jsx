@@ -1,57 +1,73 @@
 import React from 'react';
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Grid';
 import styled from "styled-components";
-
-
+import SocialFacebook from './SocialFacebook';
+import SocialTwitter from './SocialTwitter';
+import SocialGithub from './SocialGithub';
+import SocialLinkdin from './SocialLinkdin';
 
 const Section = styled.div`
-height: 100vh;
-scroll-snap-align: center;
 display: flex;
 justify-content: center;
-flex-direction: column;
-align-items: center;
-justify-content: space-between;
+scroll-snap-align: center;
+background-color: #252424eb;
+padding: 0; 
+
 `
 
 const Container = styled.div`
-height: 100vh;
-scroll-snap-align: center;
-display: flex;
-justify-content: space-between;
-width: 1400px;
-`;
 
-const Top = styled.div`
-flex: 2;
 display: flex;
+align-items: center;
 flex-direction: column;
-justify-content: center;
-gap: 5px;
-padding-left: 12px;
-background-color: red;  
+justify-content: space-between;
+
+`
+
+const Socials = styled.div`
+display: flex;
+flex-direction: row;
+justify-content: space-between;`
+;
+
+const SocialList = styled.div`
+display: flex;
+margin: auto;
+cursor: pointer;
+/* background-color: #000000; */
 `;
 
 
-const Bottom = styled.div`
-flex: 3;
-justify-content : center;
-position: relative;
-background-color: aliceblue;
-`;
+const Note = styled.h6`
+display: flex;
+font-size: 16px;
+font-family:"Century Gothic";
+
+font-weight: 100;
+color: #ffffff;
+transform: translate(-10%, -50%);`;
+
+
 
 
 const Footer = () => {
     return (
         <Section>
             <Container>
-                <h1>The Website is Still Under Devlopment...........</h1>
-                <Grid container spacing={2}>
-
-
-                </Grid>
+                <Socials >
+                <SocialList>
+                <SocialFacebook/>
+                </SocialList>
+                <SocialList>
+                <SocialTwitter />
+                </SocialList>
+                <SocialList>
+                <SocialGithub />
+                </SocialList>
+                <SocialList>
+                <SocialLinkdin />
+                </SocialList>
+              </Socials>
+              <Note>© 2023 Shivam Anand. Hosted on Digital Ocean </Note>  
             </Container>
         </Section>
             );

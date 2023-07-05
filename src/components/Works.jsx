@@ -8,6 +8,10 @@ import { useState } from "react";
 import Development from './Development.jsx';
 import WebDesign from './WebDesign.jsx';
 import { motion } from 'framer-motion';
+import SocialFacebook from './SocialFacebook.jsx';
+import SocialTwitter from './SocialTwitter.jsx';
+import SocialGithub from './SocialGithub.jsx';
+import SocialLinkdin from './SocialLinkdin.jsx';
 
 
 const data = [
@@ -30,7 +34,36 @@ const Container = styled.div`
 width: 1400px;
 display : flex; 
 justify-content: space-between; 
+flex-direction: column;
+gap: 8px;
 `
+
+const Content = styled.div`
+display: flex;
+flex-grow: 2;
+/* background-color: #b94848; */
+`;
+
+
+const Socials = styled.div`
+display: flex;
+flex-grow: 2;
+background-color: #8e93931e;
+flex-direction: row;
+padding-left: 10%;
+padding-right: 20%;
+justify-content: space-between;`;
+
+const SocialList = styled.div`
+display: flex;
+margin: auto;
+cursor: pointer;
+/* background-color: #000000; */
+`;
+
+
+
+
 
 const Left = styled.div`
 flex: 1;
@@ -46,7 +79,7 @@ gap: 20px;
 `
 
 const ListItem = styled(motion.li)`
-font-size: 74px;
+font-size: 72px;
 font-weight: bold;
 cursor: pointer;
 color: transparent;
@@ -91,6 +124,7 @@ const Works = () => {
     return (
         <Section>
             <Container>
+              <Content>
                 <Left>
                 <List>
             {data.map((item) => (
@@ -121,6 +155,22 @@ const Works = () => {
             <Development />
           )}
                 </Right>
+              </Content>
+{/* 
+              <Socials >
+                <SocialList>
+                <SocialFacebook/>
+                </SocialList>
+                <SocialList>
+                <SocialTwitter />
+                </SocialList>
+                <SocialList>
+                <SocialGithub />
+                </SocialList>
+                <SocialList>
+                <SocialLinkdin />
+                </SocialList>
+              </Socials> */}
             </Container>
         </Section>
     );
