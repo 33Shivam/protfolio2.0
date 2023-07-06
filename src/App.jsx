@@ -8,6 +8,7 @@ import Who from './components/Who'
 import Contact from './components/Contact'
 import styled from 'styled-components';
 import Footer from './components/Footer'
+import { Route, Router } from 'react-router'
 
 const Container = styled.div`
 height: 100vh;

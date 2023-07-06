@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
 import { easeIn, motion } from 'framer-motion';
 import { useState } from 'react';
 import Form from './form';
 import Modal from '@mui/material/Modal';
 import { Typography } from '@mui/material';
-
+import Form1 from './form1';
+import { useNavigate } from "react-router-dom";
+import { Ref } from 'react';
+import {Link} from 'react-scroll';
 
 const Section = styled.div`
 display: flex;
@@ -91,10 +94,24 @@ list-style: none;
 const Logo = styled.img`
 height: 100px;`;
 
+
+
 const Navbar = () => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const [modal, setModal] = useState(false);
+  const toggleModal = () => setModal(!modal);
+  const [click,setClick] = useState(false);
+  const handleClick = () => setClick(!click);
+  const closeMenu = () => setClick(false);
+
+  
+  
+  
+
+
+  
 
     return (   
 
@@ -103,27 +120,26 @@ const Navbar = () => {
                 <Links>
                 <Logo src = './images/bgrem.png'/> 
                 <List >
-                <ListItem>Home</ListItem> 
-                <ListItem onClick={handleOpen}> Contact</ListItem>
+  <ListItem>Home</ListItem>
+   <ListItem>Works</ListItem>
+   <ListItem>Socials</ListItem>  
+                <ListItem onClick={handleOpen} > Contact</ListItem>
                 <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-        
+        aria-describedby="modal-modal-description"        
       >
         <Form/>
       </Modal>
-                <ListItem>Works</ListItem> 
-                <ListItem>Socials</ListItem> 
+                
                 </List>
                 </Links>
                 <Icons>
                     <Icon src = ''/>
                     <Button  whileHover={{ scale: 1.1 }}
-                    whileTap={{scale:0.9}} >Hire Now</Button>    
-
-                    
+                    whileTap={{scale:0.9}} onClick={toggleModal}>Hire Now</Button>
+                    {modal && <Form1 toggleModal={toggleModal} />}                                 
                 </Icons>
             </Container>
            </Section>
