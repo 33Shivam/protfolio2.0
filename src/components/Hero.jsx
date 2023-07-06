@@ -131,9 +131,20 @@ font-weight: 800;
 margin: 0;
 color: #17e1a4;`;
 
+
+
+//Download Function 
+function Download() {
+
+  const filepath = "../src/assets/Resume1.pdf";  //defining the path
+  window.open(filepath,'_blank')   //opens new tab
+  console.log(filepath);
+
+}
+
 const Hero = () => {
     return (
-        <Section>
+        <Section id="home">
             <Navbar />
             <Container>
             <Left>
@@ -169,8 +180,8 @@ Welcome to my website! I'm Shivam Anand,
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{
         duration: 0.8,
-        ease: [0, 0.71, 0.2, 1.01]
-      }} whileHover={{scale:1.1}} whileTap={{scale:0.95}}>Download CV</Button>
+        ease: [0, 0.71, 0.2, 1.01]  
+      }} whileHover={{scale:1.1}} whileTap={{scale:0.95}} onClick={Download}>Download CV</Button>
             </Left>
             <Right>
             <Canvas>

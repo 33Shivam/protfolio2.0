@@ -122,7 +122,7 @@ flex:1;
 const Works = () => {
     const [work, setWork] = useState("React3d");
     return (
-        <Section>
+        <Section id='works'>
             <Container>
               <Content>
                 <Left>
