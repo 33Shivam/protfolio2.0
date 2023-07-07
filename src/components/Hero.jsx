@@ -136,7 +136,7 @@ color: #17e1a4;`;
 //Download Function 
 function Download() {
 
-  const filepath = "../src/assets/Resume1.pdf";  //defining the path
+  const filepath = "./Resume1.pdf";  //defining the path
   window.open(filepath,'_blank')   //opens new tab
   console.log(filepath);
 
